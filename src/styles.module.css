@@ -1,9 +1,75 @@
 /* add css module styles here (optional) */
 
 .test {
-  margin: 2em;
+  /* margin: 2em;
   padding: 0.5em;
   border: 2px solid #000;
   font-size: 2em;
-  text-align: center;
+  text-align: center; */
+  padding:10px;
+  margin-left: 10px;
+}
+
+.addFilterBtn {
+  background-color: #fff;
+  color: blue;
+}
+
+.addGroupBtn {
+  background-color: #fff;
+  color: blue;
+}
+
+.addFilterBtn,.addGroupBtn{
+  border:0px;
+}
+
+.ruleText {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.groupView{
+  padding: 10px;
+  border:1px solid blue;
+  border-right:0px solid blue;
+  position: relative;
+  
+}
+
+.groupView2{
+  
+  position: absolute;
+  top: -2px;
+  left: 20px;
+  right: 0px;
+  bottom: -2px;
+  background-color: #fff;
+}
+
+.groupView3{
+  
+  position: relative;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  
+}
+
+.operator{
+  position: absolute;
+  top: 40%;
+  border:1px solid grey;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+
+}
+
+.buttonContainer{
+  bottom:0px;
 }
