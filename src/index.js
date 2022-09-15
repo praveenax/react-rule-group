@@ -3,13 +3,13 @@ import styles from './styles.module.css'
 
 const GroupView = ({ operator, rules, level }) => {
   return (
-    <div className={styles.groupView}>
+    <div className={styles.groupView} style={{ borderColor: `${operator === 'AND' ? '#3498db' : '#e67e22'}` }}>
       <div
         className={styles.groupView2}
-        style={{ borderColor: `${operator === 'AND' ? 'blue' : 'orange'}` }}
+        
       ></div>
       <div className={styles.groupView3}>
-        <div className={styles.operator}>{operator}</div>
+        <div className={styles.operator} style={{background: `${operator === 'AND' ? '#3498db' : '#e67e22'}`}}>{operator}</div>
         {rules && rules.length > 0 && (
           <ReactRuleGroup text='' rules={rules} level={level + 1} />
         )}

@@ -6,7 +6,7 @@
   border: 2px solid #000;
   font-size: 2em;
   text-align: center; */
-  padding:10px;
+  padding: 10px;
   margin-left: 10px;
 }
 
@@ -20,28 +20,29 @@
   color: blue;
 }
 
-.addFilterBtn,.addGroupBtn{
-  border:0px;
+.addFilterBtn,
+.addGroupBtn {
+  border: 0px;
 }
 
 .ruleText {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #bebebe;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
-.groupView{
+.groupView {
   padding: 10px;
-  border:1px solid blue;
-  border-right:0px solid blue;
+  border: 2px solid blue;
+  border-right: 0px solid blue;
   position: relative;
-  
+
 }
 
-.groupView2{
-  
+.groupView2 {
+
   position: absolute;
   top: -2px;
   left: 20px;
@@ -50,26 +51,26 @@
   background-color: #fff;
 }
 
-.groupView3{
-  
+.groupView3 {
+
   position: relative;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  
+
 }
 
-.operator{
+.operator {
   position: absolute;
   top: 40%;
-  border:1px solid grey;
+  /* border:1px solid grey; */
   padding: 5px;
   border-radius: 4px;
   font-size: 12px;
-
+  color: #fff;
 }
 
-.buttonContainer{
-  bottom:0px;
+.buttonContainer {
+  bottom: 0px;
 }
