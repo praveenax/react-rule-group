@@ -28,9 +28,10 @@
 .ruleText {
   padding: 8px;
   border-radius: 20px;
-  border: 1px solid #bebebe;
+  border: 1px solid #f7f7f7;
   font-size: 12px;
   margin-bottom: 10px;
+  background: #f7f7f7;
 }
 
 .groupView {
@@ -73,4 +74,16 @@
 
 .buttonContainer {
   bottom: 0px;
+}
+
+.selectOperator {
+  background: transparent;
+  border: 0px;
+  color: #fff;
+}
+
+.ruleSelect {
+  border-color: transparent;
+  padding: 6px;
+  border-radius: 6px;
 }

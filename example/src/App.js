@@ -4,6 +4,7 @@ import { ReactRuleGroup } from 'react-rule-group'
 import 'react-rule-group/dist/index.css'
 const inputJson = [
   {
+    "id": "g1",
     "type": "group",
     "rules": [
       {
@@ -11,6 +12,7 @@ const inputJson = [
         "text": "Select contacts in last 7 number"
       },
       {
+        "id": "g1_g2",
         "type": "group",
         "rules": [
           {
@@ -22,6 +24,7 @@ const inputJson = [
             "text": "Contacts from Email Channel"
           },
           {
+            "id": "g1_g2_g3",
             "type": "group",
             "rules": [{
               "type": "rule",

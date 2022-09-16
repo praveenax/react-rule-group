@@ -1,40 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
-
-const GroupView = ({ operator, rules, level }) => {
-  return (
-    <div className={styles.groupView} style={{ borderColor: `${operator === 'AND' ? '#3498db' : '#e67e22'}` }}>
-      <div
-        className={styles.groupView2}
-        
-      ></div>
-      <div className={styles.groupView3}>
-        <div className={styles.operator} style={{background: `${operator === 'AND' ? '#3498db' : '#e67e22'}`}}>{operator}</div>
-        {rules && rules.length > 0 && (
-          <ReactRuleGroup text='' rules={rules} level={level + 1} />
-        )}
-        <button className={styles.addFilterBtn}>Add Filter</button>
-        <button className={styles.addGroupBtn}>Add Group</button>
-      </div>
-    </div>
-  )
-}
-
-const RuleView = ({ data }) => {
-  return <div className={styles.ruleText}>{data}</div>
-}
+import { GroupView } from './GroupView'
+import { RuleView } from './RuleView'
 
 export const ReactRuleGroup = ({ text, rules, level = 0 }) => {
+  const [ruleArr, setRuleArr] = useState([])
+  // const addFilter = (id) => {
+  //   //show modal for add filter
+  //   console.log('test')
+  //   let temp = ruleArr[0].rules
+  //   temp.push({
+  //     type: 'rule',
+  //     text: 'this is a new rule'
+  //   })
+
+  //   ruleArr[0].rules = temp;
+  //   console.log(ruleArr)
+  //   setRuleArr(ruleArr)
+  // }
+  
+  useEffect(() => {
+    setRuleArr(rules)
+  }, [rules])
   return (
     <div className={styles.test} style={{ paddingLeft: `50px` }}>
-      {rules.map((r, i) => {
+      {/* RULEGROUP{ruleArr.length} */}
+      {ruleArr.map((r, i) => {
         if (r.type === 'group') {
           return (
             <GroupView
               key={i}
+              id={r.id}
               operator={r.operator}
               rules={r.rules}
               level={level}
+              // addFilter={addFilter}
             />
           )
         }
