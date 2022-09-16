@@ -9,7 +9,11 @@ const inputJson = [
     "rules": [
       {
         "type": "rule",
-        "text": "Select contacts in last 7 number"
+        "condition": {
+          "condition_type":"last_name",
+          "condition_operator":"=",
+          "condition_value":"Praveen",
+        }
       },
       {
         "id": "g1_g2",
@@ -17,22 +21,38 @@ const inputJson = [
         "rules": [
           {
             "type": "rule",
-            "text": "Select from emoji"
+            "condition": {
+              "condition_type":"",
+              "condition_operator":"",
+              "condition_value":"",
+            }
           },
           {
             "type": "rule",
-            "text": "Contacts from Email Channel"
+            "condition": {
+              "condition_type":"",
+              "condition_operator":"",
+              "condition_value":"",
+            }
           },
           {
             "id": "g1_g2_g3",
             "type": "group",
             "rules": [{
               "type": "rule",
-              "text": "master_contact > gender equals F"
+              "condition": {
+                "condition_type":"",
+                "condition_operator":"",
+                "condition_value":"",
+              }
             },
             {
               "type": "rule",
-              "text": "master_contact > birth_date is after current_date"
+              "condition": {
+                "condition_type":"",
+                "condition_operator":"",
+                "condition_value":"",
+              }
             },],
             "operator": "AND"
           }

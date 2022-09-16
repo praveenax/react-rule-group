@@ -39,7 +39,7 @@ export const ReactRuleGroup = ({ text, rules, level = 0 }) => {
           )
         }
         if (r.type === 'rule') {
-          return <RuleView key={i} data={r.text} />
+          return <RuleView key={i} data={r.condition} />
         }
       })}
     </div>

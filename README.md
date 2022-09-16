@@ -15,12 +15,46 @@ npm install --save react-rule-group
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-rule-group'
+import { ReactRuleGroup } from 'react-rule-group'
 import 'react-rule-group/dist/index.css'
-
+const inputJson = [
+  {
+    "id": "g1",
+    "type": "group",
+    "rules": [
+      {
+        "type": "rule",
+        "condition": {
+          "condition_type":"last_name",
+          "condition_operator":"=",
+          "condition_value":"Praveen",
+        }
+      },
+      {
+        "id": "g1_g2",
+        "type": "group",
+        "rules": [
+          {
+            "type": "rule",
+            "condition": {
+              "condition_type":"",
+              "condition_operator":"",
+              "condition_value":"",
+            }
+          },
+          ],
+            "operator": "AND"
+          }
+        ],
+        "operator": "OR"
+      }
+    ],
+    "operator": "AND"
+  }
+]
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <ReactRuleGroup rules={inputJson} />
   }
 }
 ```

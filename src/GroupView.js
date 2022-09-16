@@ -16,18 +16,16 @@ export const GroupView = ({ id, operator, rules, level }) => {
     ])
   }
   const addFilter = () => {
-    //show modal for add filter
-    console.log('test')
-    const temp = ruleSet
-    // temp.push({
-    //   "type": "rule",
-    //   "text": "this is a new rule"
-    // })
+    
     setRuleSet([
       ...ruleSet,
       {
         type: 'rule',
-        text: 'this is a new rule'
+        condition: {
+            "condition_type":"",
+            "condition_operator":"",
+            "condition_value":"",
+          }
       }
     ])
     console.log(ruleSet)
@@ -41,7 +39,7 @@ export const GroupView = ({ id, operator, rules, level }) => {
       className={styles.groupView}
       style={{ borderColor: `${op === 'AND' ? '#3498db' : '#e67e22'}` }}
     >
-      {/* {ruleSet.length} */}
+      
       <div className={styles.groupView2}></div>
       <div className={styles.groupView3}>
         {ruleSet && ruleSet.length > 0 && (

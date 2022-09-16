@@ -1,7 +1,7 @@
 {
   "name": "react-rule-group",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "version": "1.0.2",
+  "description": "React library to implement Rule/Group Hierarchy",
   "author": "praveenax",
   "license": "MIT",
   "repository": "praveenax/react-rule-group",
