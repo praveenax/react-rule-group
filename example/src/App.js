@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React, {useState} from 'react'
+import ReactJson from 'react-json-view'
 import { ReactRuleGroup } from 'react-rule-group'
 import 'react-rule-group/dist/index.css'
 const inputJson = [
@@ -65,7 +65,11 @@ const inputJson = [
 ]
 
 const App = () => {
-  return <ReactRuleGroup text="Create React Library Example 😄" rules={inputJson} />
+  const [json,setJson] = useState(inputJson);
+  const updateJson = (ip) => {
+    setJson(ip)
+  }
+  return <><ReactRuleGroup text="Create React Library Example 😄" input={json} rules={json} updateJson={updateJson} /><br/><ReactJson src={json} /></>
 }
 
 export default App

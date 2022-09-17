@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './styles.module.css'
 import { ReactRuleGroup } from '.'
-export const GroupView = ({ id, operator, rules, level }) => {
+export const GroupView = ({ id, operator, rules, level, input }) => {
   const [ruleSet, setRuleSet] = useState([])
   const [op, setOp] = useState(false)
   const addGroup = () => {
@@ -15,7 +15,7 @@ export const GroupView = ({ id, operator, rules, level }) => {
       }
     ])
   }
-  const addFilter = () => {
+  const addFilter = (id) => {
     
     setRuleSet([
       ...ruleSet,
@@ -29,6 +29,18 @@ export const GroupView = ({ id, operator, rules, level }) => {
       }
     ])
     console.log(ruleSet)
+    
+    //id - filter the group
+    // updateJson()
+    let ids = id.split('_')
+    console.log(ids)
+    console.log(input)
+    for(let i=0;i<ids.length;i++){
+        let idVal = ids[i]
+
+        let temp = input?.filter(v=>v.id===idVal)
+        console.log(temp)
+    }
   }
   useEffect(() => {
     setOp(operator)
